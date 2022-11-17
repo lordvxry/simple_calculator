@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc {
+    width: 420px;
+    border: solid 1px #000;
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.calc__screen {
+    grid-column: 1 / -1;
+    height: 60px;
+    background-color: #f1f1f1;
+    border: solid 1px #000;
+    color: #000;
+    padding: 15px;
+    font-size: 28px;
+    text-align: end;
+}
+
+.calc__btn {
+    min-height: 40px;
+    width: 60px;
+    border-radius: 0;
+    border: solid 1px #000;
+    font-size: 14px;
+    box-shadow: 2px 2px 2px #00000040;
+}
+
+.calc__btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.calc__btn:active {
+    box-shadow: 1px 1px 2px #3b3a3a40;
+}
+
+.calc__btn_equally {
+    width: 220%;
+    grid-column: 4;
+    grid-row: 5 / 5;
+}
