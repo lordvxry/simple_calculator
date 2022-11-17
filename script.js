@@ -12,6 +12,8 @@ const keys = document.querySelector(".calc");
 const updateDisplay = (value) => {
     if (calculator.displayValue === "0" && value === "0"){
         return;
+    } else if (calculator.displayValue.includes(".") && value === ".") {
+        return;
     }
     calculator.displayValue += value;
     display.value = calculator.displayValue;
